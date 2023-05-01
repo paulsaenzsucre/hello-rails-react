@@ -6,6 +6,14 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
+  def random
+    @random_msg = Message.all.sample
+    
+    respond_to do |format|
+      format.json { render json: @random_msg }
+    end
+  end
+
   # GET /messages/1 or /messages/1.json
   def show
   end
