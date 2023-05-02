@@ -6,12 +6,13 @@ class MessagesController < ApplicationController
   def index; end
 
   def random
-    begin
+    loop do
       @random_msg = Message.all.sample
-    end until @last_msg_id != @random_msg.id
+      break if @last_msg_id != @random_msg.id
+    end
 
     @last_msg_id = @random_msg.id
-    
+
     respond_to do |format|
       format.json { render json: @random_msg }
     end
