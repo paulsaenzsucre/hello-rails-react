@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "messages#index"
   get '/random', to: 'messages#random'
+  get '/greeting', to: 'messages#index'
 end
