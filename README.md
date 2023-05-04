@@ -7,9 +7,14 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🚀 Presentation Video](#live-presentation)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -54,19 +59,13 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
-In order to run this project:
+In order to run this project you need:
 
-- [ ] You’ll need to have Ruby on your machine.
-
-Optionally, in order to modify this project you should to have installed:
-
-- [ ] Git.
-
-- [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), [Sublime text](https://www.sublimetext.com/) or others...
+- [Ruby (>=3.0)] (https://www.ruby-lang.org/en/)
+- [Rails (>=7.0)] (https://rubyonrails.org/)
+- [PostgreSQL (>=15.0)] (https://www.postgresql.org/)
 
 ### Setup
 
@@ -84,7 +83,39 @@ git clone https://github.com/paulsaenzsucre/hello-rails-react.git
 cd hello-rails-react
 ```
 
-- Open it with your favorite code editor.
+### Install
+
+Install this project with:
+
+```console
+bundle install
+yarn install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```console
+bundle exec rails db:create
+bundle exec rails db:migrate
+bundle exec rails start
+```
+
+then go to [http://localhost:300] (http://localhost:300).
+
+### Run tests
+
+To run tests, run the following command:
+
+```console
+  bundle exec rails db:migrate RAILS_ENV=test
+  bundle exec rspec
+```
+
+### Deployment
+
+To deploy this project you will need a database service and a web service.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +132,7 @@ cd hello-rails-react
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+These are the future features of our project:
 
 - [ ] **User can filter the greetings by some key**
 
